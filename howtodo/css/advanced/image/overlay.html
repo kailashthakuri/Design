@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      .col {
+        float: left;
+        width: 25%;
+        position: relative;
+        padding: 15px;
+      }
+      img {
+        width: 100%;
+      }
+      .overlay {
+        position: absolute;
+        z-index: 1;
+        background-color: #008cba;
+        width: 100%;
+        /* top: 0px; */
+        bottom: 0px;
+        /* left: 0; */
+        /* right: 0; */
+        height: 100%;
+        text-align: center;
+        opacity: 0;
+        transition: 1s linear;
+      }
+      .col:hover .overlay {
+        opacity: 1;
+      }
+      .text {
+        position: absolute;
+        text-align: center;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 30px;
+      }
+      .overlay1 {
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        background-color: #008cba;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        z-index: 1;
+        transition: 2s ease;
+      }
+      .col-btn:hover img {
+        opacity: 0.5;
+      }
+      .col-btn:hover button {
+        opacity: 1;
+      }
+      button {
+        opacity: 0;
+        padding: 10px;
+        background-color: #4caf50;
+        transition: 2s ease;
+      }
+      .overlay2 {
+        position: absolute;
+        height: 0;
+        top: 0;
+        width: 100%;
+        transition: 1s linear;
+        background-color: #008cba;
+      }
+      .slide-in-top:hover .overlay2 {
+        height: 100%;
+      }
+      .overlay3 {
+        position: absolute;
+        width: 100%;
+        background-color: #008cba;
+        height: 0px;
+        bottom: 0;
+        transition: 1s linear;
+      }
+      .slide-in-bottom:hover .overlay3 {
+        height: 100%;
+      }
+      .overlay4 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 0px;
+        background-color: #008cba;
+        transition: 1s linear;
+      }
+      .slide-in-left:hover .overlay4 {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <div class="col">
+        <img src="../../../img/650009.jpg" alt="" srcset="" />
+        <div class="overlay">
+          <div class="text">
+            Hello World
+          </div>
+        </div>
+      </div>
+      <div class="col col-btn">
+        <img src="../../../img/650009.jpg" alt="" srcset="" />
+        <div class="overlay1"></div>
+        <div class="text"><button>Join Me</button></div>
+      </div>
+      <div class="col slide-in-top">
+        <img src="../../../img/650009.jpg" alt="" srcset="" />
+        <div class="overlay2"><div class="text">Hello World</div></div>
+      </div>
+      <div class="col slide-in-bottom">
+        <img src="../../../img/650009.jpg" alt="" srcset="" />
+        <div class="overlay3"><div class="text">Hello World</div></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col slide-in-left">
+        <img src="../../../img/650009.jpg" alt="" srcset="" />
+        <div class="overlay4">
+          <div class="text">Hello World</div>
+        </div>
+      </div>
+    </div>
+    <h2>Hover images to see effects</h2>
+  </body>
+</html>

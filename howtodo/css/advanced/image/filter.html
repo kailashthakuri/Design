@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      .col {
+        float: left;
+        width: 25%;
+      }
+      img {
+        width: 100%;
+      }
+      .filter .col:nth-child(1) {
+        filter: grayscale(100%);
+      }
+      .filter .col:nth-child(2) {
+        filter: brightness(200%);
+      }
+
+      .filter .col:nth-child(3) {
+        filter: contrast(150%);
+      }
+      .filter .col:nth-child(4) {
+        filter: blur(3px);
+      }
+
+      .filter1 .col:nth-child(1) {
+        filter: saturate(7);
+      }
+      .filter1 .col:nth-child(2) {
+        filter: sepia(100%);
+      }
+
+      .filter1 .col:nth-child(3) {
+        filter: invert(100%);
+      }
+      .filter1 .col:nth-child(4) {
+        filter: drop-shadow(8px 8px 10px green);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row filter">
+      <div class="col"><img src="../../../img/401837.jpg" /></div>
+      <div class="col"><img src="../../../img/401837.jpg" /></div>
+      <div class="col"><img src="../../../img/401837.jpg" /></div>
+      <div class="col"><img src="../../../img/401837.jpg" /></div>
+    </div>
+    <div class="row filter1">
+      <div class="col"><img src="../../../img/401837.jpg" /></div>
+      <div class="col"><img src="../../../img/401837.jpg" /></div>
+      <div class="col"><img src="../../../img/401837.jpg" /></div>
+      <div class="col"><img src="../../../img/401837.jpg" /></div>
+    </div>
+  </body>
+</html>

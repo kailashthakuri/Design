@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .anim1 {
+        animation-name: backgroundChange;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+      .anim2 {
+        background-color: red;
+        position: relative;
+        animation-name: boxMove, backgroundChange;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      .anim3 {
+        position: relative;
+        animation-name: boxMove, backgroundChange;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+      }
+      .anim4 {
+        position: relative;
+        background-color: red;
+        animation-name: boxMove, backgroundChange;
+        animation-delay: 2s;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+      }
+      [class*="anim"] {
+        height: 100px;
+        width: 150px;
+      }
+      @keyframes backgroundChange {
+        from {
+          background-color: red;
+        }
+        to {
+          background-color: yellow;
+        }
+      }
+      @keyframes boxMove {
+        0% {
+          top: 0px;
+          left: 0px;
+        }
+        25% {
+          top: 0px;
+          left: 200px;
+        }
+        50% {
+          top: 200px;
+          left: 200px;
+        }
+        75% {
+          top: 200px;
+          left: 0px;
+        }
+        100% {
+          top: 0px;
+          left: 0px;
+        }
+      }
+      .anim3:hover {
+        animation-play-state: paused;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="anim1">Hellow World</div>
+    <div class="anim2">Hellow World</div>
+    <div class="anim3">Hover Me To pause Animation</div>
+    <div class="anim4">Hellow World</div>
+  </body>
+</html>

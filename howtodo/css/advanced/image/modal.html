@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        position: relati ve;
+        height: 400px;
+        width: 100%;
+      }
+      #modal {
+        display: none;
+        position: fixed;
+        left: 0;
+        padding-top: 90px;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.9);
+        transition: 2s linear;
+      }
+      img {
+        width: 100%;
+      }
+      #image {
+        position: absolute;
+        width: 20%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: 2s ease;
+      }
+
+      @keyframes anim {
+        from {
+          transform: scale(0.1);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+
+      .content,
+      .footer {
+        animation: anim 1s linear;
+      }
+
+      .content {
+        display: block;
+        margin: auto;
+        width: 80%;
+        max-width: 700px;
+      }
+      .header {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        cursor: pointer;
+        font-size: 30px;
+        color: white;
+        transition: 0.5s;
+      }
+      .footer {
+        width: 80%;
+        max-width: 700px;
+        margin: auto;
+        height: 150px;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="modal">
+        <div class="header">&times</div>
+        <div class="content">
+          <img id="modal-img" />
+        </div>
+        <div class="footer"></div>
+      </div>
+      <img
+        id="image"
+        src="../../../img/790566.png"
+        alt="Fight Between ........."
+      />
+    </div>
+    <script type="text/javascript">
+      var modal = document.getElementById("modal");
+      var modalImg = document.getElementById("modal-img");
+      var footer = document.getElementsByClassName("footer")[0];
+      document.getElementById("image").addEventListener("click", function () {
+        console.error("Text");
+        console.error(this);
+        modalImg.src = this.src;
+        modal.style.display = "block";
+        modal.style.opacity = "visible";
+        footer.innerHTML = this.alt;
+      });
+      var cross = document.getElementsByClassName("header")[0];
+      cross.onclick = function () {
+        console.error("Cross CLicked");
+        modal.style.display = "none";
+      };
+    </script>
+  </body>
+</html>

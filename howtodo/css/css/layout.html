@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .container {
+        background-color: #f1f1f1;
+        padding: 20px;
+      }
+      .header {
+        width: 100%;
+        text-align: center;
+        background-color: white;
+        margin-bottom: 10px;
+      }
+      .header p {
+        margin: auto;
+        width: 50%;
+      }
+      .header div {
+        font-size: 40px;
+        font-weight: 700;
+      }
+      .header img {
+        width: 200px;
+        height: 150px;
+      }
+      .navbar {
+        width: 100%;
+        color: white;
+        background-color: #857979;
+        overflow: hidden;
+        margin-bottom: 10px;
+      }
+      .navbar ul {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+      }
+      .navbar li {
+        padding: 10px;
+        float: left;
+      }
+      .navbar li:hover {
+        background-color: black;
+        cursor: pointer;
+      }
+      .card {
+        background-color: white;
+        padding: 10px;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      h3 {
+        margin-top: 0px;
+      }
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .col-70 {
+        float: left;
+        width: 70%;
+      }
+      .col-30 {
+        float: left;
+        width: 30%;
+        padding-left: 30px;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .footer {
+        background-color: #cbbdbd;
+        padding: 10px;
+        text-align: center;
+      }
+
+      @media screen and (max-width: 900px) {
+        [class*="col"] {
+          padding: 0px;
+          width: 100%;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .navbar li {
+          float: none;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div>One Piece</div>
+        <img src="../../gif/giphy (1).gif" />
+        <img src="../../img/737145.png" />
+        <img src="../../gif/giphy (3).gif" />
+        <img src="../../gif/giphy (2).gif" />
+        <p>
+          One Piece is a Japanese shōnen manga series written and illustrated by
+          Eiichiro Oda. It has been serialized in Shueisha's Weekly Shōnen Jump
+          magazine since July 22, 1997, and has been collected into 96 tankōbon
+          volumes as of April 2020
+        </p>
+      </div>
+      <div class="navbar">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+          <li>Blog</li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="col-70">
+          <div class="card">
+            <h2>Monkey D. Luffy</h2>
+            <p>
+              <strong>Haki power: </strong>Busoshoku Haki, Haoshoku Haki,
+              Kenbunshoku Haki
+            </p>
+            <img src="../../gif/giphy.gif" />
+            <p>
+              Monkey D. "Straw Hat" Luffy is a fictional character and the main
+              protagonist of the One Piece manga series, created by Eiichiro
+              Oda. Luffy made his debut in One Piece Chapter #1 as a young boy
+              who acquires the properties of rubber after accidentally eating
+              the supernatural Gum-Gum Fruit
+            </p>
+          </div>
+          <div class="card">
+            <h2>Ace("Fire Fist")</h2>
+            <p><strong>Devil fruit: </strong>Mera Mera no Mi</p>
+            <img src="../../img/649995.jpg" />
+            <p>
+              Ace (ゴール・D・エース, Gōru D. Ēsu) and nicknamed "Fire Fist" Ace
+              (火拳のエース, Hiken no Ēsu), is both a fictional character and
+              tritagonist of the One Piece series. He was the adopted older
+              brother of Luffy and Sabo, and son of the late King of the
+              Pirates, Gol D. Roger and his lover, Portgas D. Rouge
+            </p>
+          </div>
+        </div>
+        <div class="col-30">
+          <div class="card">
+            <h3>Edward Newgate(WhiteBeared)</h3>
+            <p>
+              <strong>Haki power:</strong> Busoshoku Haki, Haoshoku Haki,
+              Kenbunshoku Haki
+            </p>
+            <img src="../../img/804320.png" />
+          </div>
+          <div class="card">
+            <h3>Boa Hancock</h3>
+            <p><strong>Haki power:</strong> Mero Mero no Mi</p>
+            <img src="../../img/738089.png" />
+          </div>
+          <div class="card">
+            <h3>Vinsmoke Sanji</h3>
+            <p><strong>Haki power:</strong> Busoshoku Haki, Kenbunshoku Haki</p>
+            <img src="../../img/650011.png" />
+          </div>
+          <div class="card">
+            <h3>Trafalgar D. Water Law</h3>
+            <p><strong>Haki power:</strong> Busoshoku Haki</p>
+            <img src="../../img/650009.jpg" />
+          </div>
+          <div class="card">
+            <h3>Donquixote Doflamingo</h3>
+            <p><strong>Haki power:</strong> Busoshoku Haki, Haoshoku Haki</p>
+            <img src="../../img/790585.png" />
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div>Footer</div>
+      </div>
+    </div>
+  </body>
+</html>

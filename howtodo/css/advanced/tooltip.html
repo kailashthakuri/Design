@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .tooltip {
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+        margin-left: 10px;
+      }
+      [class*="tooltip-content"] {
+        position: absolute;
+        visibility: hidden;
+        background-color: black;
+        color: white;
+        min-width: 100px;
+        padding: 5px;
+        border-radius: 6px;
+        text-align: center;
+        z-index: 1;
+      }
+      .tooltip:hover .tooltip-content {
+        visibility: visible;
+      }
+      .container {
+        padding-top: 50px;
+        text-align: center;
+      }
+      .tooltip1 {
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+        margin-left: 10px;
+      }
+      .tooltip-content1 {
+        left: 115%;
+        top: -5px;
+      }
+      .tooltip-content1::after {
+        content: " ";
+        position: absolute;
+        left: -9%;
+        margin-top: 4px;
+        border: 5px solid;
+        border-color: transparent black transparent transparent;
+      }
+      .tooltip1:hover .tooltip-content1 {
+        visibility: visible;
+      }
+      .tooltip2 {
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+        margin-left: 10px;
+      }
+      .tooltip-content2 {
+        right: 120%;
+        top: -5px;
+      }
+      .tooltip-content2:after {
+        position: absolute;
+        content: " ";
+        left: 100%;
+        margin-top: 4px;
+        border: 5px solid;
+        border-color: transparent transparent transparent black;
+      }
+      .tooltip2:hover .tooltip-content2 {
+        visibility: visible;
+      }
+      .tooltip3 {
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+        margin-left: 10px;
+      }
+      .tooltip-content3 {
+        bottom: 140%;
+        left: 50%;
+        margin-left: -60px; /*width/2 + margin parent*/
+      }
+      .tooltip-content3:after {
+        content: " ";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        border: 5px solid;
+        border-color: black transparent transparent transparent;
+      }
+      .tooltip3:hover .tooltip-content3 {
+        visibility: visible;
+      }
+      .tooltip4 {
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+        margin-left: 10px;
+      }
+      .tooltip-content4 {
+        opacity: 0;
+        top: 150%;
+        left: 50%;
+        margin-left: -55px;
+        transition: opacity 2s linear;
+      }
+      .tooltip-content4:after {
+        content: " ";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        border: 5px solid;
+        margin-left: -5px;
+        border-color: transparent transparent black transparent;
+      }
+      .tooltip4:hover .tooltip-content4 {
+        visibility: visible;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="tooltip">
+        Hover me
+        <div class="tooltip-content">
+          tooltip text
+        </div>
+      </div>
+      <div class="tooltip1">
+        Hover me
+        <div class="tooltip-content1">
+          tooltip text
+        </div>
+      </div>
+      <div class="tooltip2">
+        Hover me
+        <div class="tooltip-content2">
+          tooltip text
+        </div>
+      </div>
+      <div class="tooltip3">
+        Hover me
+        <div class="tooltip-content3">
+          tooltip text
+        </div>
+      </div>
+      <div class="tooltip4">
+        Hover me
+        <div class="tooltip-content4">
+          tooltip text
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

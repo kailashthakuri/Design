@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        margin: 1px;
+      }
+      form {
+        background-color: #f2f2f2;
+        width: 50%;
+        border-radius: 5px;
+      }
+      .row {
+        padding: 10px;
+        width: 100%;
+        overflow: auto;
+      }
+      [class*="col"] {
+        float: left;
+        margin-top: 5px;
+      }
+      .col-25 {
+        width: 25%;
+      }
+      .col-75 {
+        width: 75%;
+      }
+      input[type="text"],
+      select,
+      textarea {
+        width: 100%;
+        border: 1px #ccc solid;
+        border-radius: 3px;
+        padding: 8px 10px;
+        resize: vertical;
+      }
+      textarea {
+        height: 200px;
+      }
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 15px;
+        border: 1px #4caf50 solid;
+        border-radius: 3px;
+        float: right;
+      }
+      label {
+        padding-top: 10px;
+        display: inline-block;
+      }
+      @media screen and (max-width: 900px) {
+        [class*="col-"] {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="">
+        <div class="row">
+          <div class="col-25">
+            <label for="fname">First Name</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="fname" placeholder="Your first name..." />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="lname">Last Name</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="lname" placeholder="Your last name..." />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="country">Country</label>
+          </div>
+          <div class="col-75">
+            <select type="text" id="country">
+              <option value="nepla">Nepal</option>
+              <option value="nepla">China</option>
+              <option value="nepla">Bhutan</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="subject">Subject</label>
+          </div>
+          <div class="col-75">
+            <textarea name="" id="subject"> </textarea>
+          </div>
+        </div>
+        <div class="row">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

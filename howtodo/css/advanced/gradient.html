@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      #container {
+        background-image: linear-gradient(red, yellow);
+      }
+      #container1 {
+        background-image: linear-gradient(to right bottom, red, yellow);
+      }
+      #container2 {
+        background-image: linear-gradient(-90deg, red, yellow);
+      }
+      #container3 {
+        background-color: whitesmoke;
+        background-image: linear-gradient(red, green, blue);
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+      }
+      #container4 {
+        background-image: radial-gradient(red, green);
+      }
+      #container5 {
+        background-image: radial-gradient(red 5%, yellow 15%, green 60%);
+      }
+      #container6 {
+        background-image: repeating-linear-gradient(red 10%, yellow 50%);
+      }
+      [id*="container"] {
+        float: left;
+        width: 200px;
+        height: 150px;
+      }
+      .row:after {
+        clear: both;
+        content: "";
+        display: table;
+      }
+      #container7 {
+        background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
+      }
+      #container8 {
+        background-image: radial-gradient(circle, red, yellow, green);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Linear Gradient Example</h2>
+    <div class="row">
+      <div id="container"></div>
+      <div id="container1"></div>
+      <div id="container2"></div>
+      <div id="container3">Multi Color Gradient</div>
+      <div id="container6">Repeating Linear Gradient</div>
+    </div>
+    <h2>Radial Gradient Example</h2>
+    <div class="row">
+      <div id="container4"></div>
+      <div id="container5"></div>
+      <div id="container7"></div>
+      <div id="container8"></div>
+      <div id="container9"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .header {
+        text-align: center;
+        padding: 5px;
+        width: 100%;
+        background-color: #eee;
+      }
+      .navbar {
+        color: white;
+      }
+      .navbar ul {
+        background-color: #7a7575;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+      .navbar ul li {
+        padding: 10px 20px;
+        float: left;
+        cursor: pointer;
+        transition: 1s;
+      }
+      .navbar ul li:hover {
+        background-color: black;
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      @media screen and (max-width: 900px) {
+        .row {
+          flex-direction: column;
+        }
+      }
+
+      .col-30 {
+        flex-basis: 30%;
+        background-color: #f2f2f2;
+      }
+      .col-70 {
+        flex-basis: 70%;
+        /* width: 70%; */
+      }
+      [class*="col"] {
+        padding: 20px;
+      }
+      img {
+        width: 100%;
+      }
+      .desc-image {
+        height: 400px;
+        object-fit: cover;
+      }
+      .footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #d7d569;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>One Piece</h1>
+        <h4>Japanese shōnen manga series</h4>
+      </div>
+      <div class="navbar">
+        <ul>
+          <li>Home</li>
+          <li>Contact</li>
+          <li>About</li>
+          <li>Blog</li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="row">
+          <div class="col-30">
+            <h3>About Me</h3>
+            <p>Photo of me</p>
+            <img src="../../../img/649995.jpg" />
+            <p>
+              Contrary to popular belief, Lorem Ipsum is not simply random text.
+              It has roots in a piece of classical Latin literature from 45 BC,
+              making it over 2000 years old.
+            </p>
+          </div>
+          <div class="col-70">
+            <h2>Title</h2>
+            <p>Description, Dec 7,2017</p>
+            <img class="desc-image" src="../../../img/650012.png" />
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <h4>This is Footer Section</h4>
+      </div>
+    </div>
+  </body>
+</html>

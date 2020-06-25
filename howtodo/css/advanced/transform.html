@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .transform1 {
+        /* transform: translate(50px, 50px); */
+      }
+      .transform2 {
+        transform: rotate(45deg);
+      }
+      [class*="transform"] {
+        height: 100px;
+        width: 150px;
+        background-color: wheat;
+        margin-bottom: 5px;
+      }
+      .transform4 {
+        transform: scale(2);
+      }
+      .column {
+        margin-left: 10px;
+        float: left;
+        width: calc(20% - 10px);
+      }
+      .transform5 {
+        transform: scale(0.5, 0.5);
+      }
+      .transform7 {
+        transform: skewX(20deg);
+      }
+      .transform8 {
+        transform: skewY(20deg);
+      }
+      .transform9:hover {
+        transition: transform 4s ease;
+        transform: rotateX(360deg);
+      }
+      .transform10:hover {
+        transition: transform 3s ease;
+        transform: rotateY(50deg);
+      }
+      .transform11:hover {
+        transition: transform 3s ease;
+        transform: rotateZ(50deg);
+      }
+      .transform12:hover {
+        transition: transform 3s ease;
+        transform: rotateX(50deg);
+        transform: rotateY(50deg);
+        transform: rotateZ(50deg);
+      }
+      .transform13 {
+        position: relative;
+        background-color: white;
+        border: 1px red solid;
+        perspective: 100px;
+      }
+      .transform13-content:hover {
+        padding: 10px;
+        transition: transform 2s ease;
+        position: absolute;
+        transform: rotateX(50deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="column">
+      <div class="transform">Normal</div>
+      <div class="transform1">Translate by 50px by 50px</div>
+      <div class="transform2">Translate by 45degree</div>
+    </div>
+    <div class="column">
+      <div class="transform3">Normal</div>
+      <div class="transform4">Scaled by 2x</div>
+      <div class="transform5">Scaled by 0.5 and 0.5</div>
+    </div>
+    <div class="column">
+      <div class="transform6">Normal</div>
+      <div class="transform7">SkewX by 20deg</div>
+      <div class="transform8">SkewY by 20deg</div>
+    </div>
+    <div class="column">
+      <div class="transform9">Hover Me Rotate X</div>
+      <div class="transform10">Hover Me Rotate Y</div>
+      <div class="transform11">Hover Me Rotate Z</div>
+      <div class="transform12">Hover Me Rotate Z</div>
+    </div>
+    <div class="column">
+      <div class="transform13">
+        <div class="transform13-content"></div>
+      </div>
+      <!-- <div class="transform14">Hover Me Rotate Y</div>
+      <div class="transform15">Hover Me Rotate Z</div>
+      <div class="transform16">Hover Me Rotate Z</div> -->
+    </div>
+  </body>
+</html>

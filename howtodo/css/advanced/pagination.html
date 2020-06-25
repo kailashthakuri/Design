@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      [class*="pagination"] {
+        margin: 20px;
+        display: inline-block;
+      }
+      .active {
+        background-color: #4caf50;
+        color: white;
+      }
+      .pagination a {
+        float: left;
+        margin: 0;
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 5px;
+        transition: background-color 1s;
+      }
+      .pagination a:hover:not(.active) {
+        background-color: #eee;
+      }
+      .pagination1 a {
+        float: left;
+        text-decoration: none;
+        padding: 8px 16px;
+        cursor: pointer;
+        border: 1px #ddd solid;
+        transition: 1s linear;
+      }
+      .pagination1 a:first-child {
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+      }
+      .pagination1 a:last-child {
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
+      .pagination1 a:hover:not(.active) {
+        background-color: #eee;
+      }
+      .pagination2 {
+        background-color: #eee;
+        padding: 10px;
+      }
+      .pagination2 span {
+        padding: 0 5px;
+      }
+      .breadcrumb {
+        margin: 20px;
+        display: inline-block;
+        list-style-type: none;
+        background-color: #eee;
+      }
+      .breadcrumb li a {
+        color: green;
+        cursor: pointer;
+      }
+      .breadcrumb li {
+        float: left;
+        margin: 0;
+        padding: 8px 10px;
+      }
+      .breadcrumb li + li::before {
+        content: "/\00A0";
+        padding-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="pagination">
+        <a href="">&laquo;</a>
+        <a href="">1</a>
+        <a class="active" href="">2</a>
+        <a href="">3</a>
+        <a href="">4</a>
+        <a href="">5</a>
+        <a href="">&raquo;</a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="pagination1">
+        <a href="">&laquo;</a>
+        <a href="">1</a>
+        <a class="active" href="">2</a>
+        <a href="">3</a>
+        <a href="">4</a>
+        <a href="">5</a>
+        <a href="">&raquo;</a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="pagination2">
+        <a href="">Home</a>
+        <span>/</span>
+        <a href="">Pictures</a>
+        <span>/</span>
+        <a href="">Summer 15</a>
+        <span>/</span>
+        <a href="">Italy</a>
+      </div>
+    </div>
+    <div class="container">
+      <ui class="breadcrumb">
+        <li><a>Home</a></li>
+        <li><a>Pictures</a></li>
+        <li><a>Summer 15</a></li>
+        <li><a>Italy</a></li>
+      </ui>
+    </div>
+  </body>
+</html>

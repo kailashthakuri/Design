@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+      .container > div {
+        flex: 1 1 calc(25% - 20px);
+        /* flex-basis: 23%; */
+        border: 1px solid #ddd;
+        margin: 10px;
+        text-align: center;
+      }
+      img {
+        width: 100%;
+        /* height: auto; */
+        /* max-height:250px; */
+        /* min-height:250px; */
+        height: 250px;
+      }
+
+      .container > div:hover {
+        border: 1px black solid;
+      }
+
+      @media screen and (max-width: 1000px) {
+        .container > div {
+          flex: 1 1 calc(50% - 20px);
+        }
+      }
+
+      @media screen and (max-width: 700px) {
+        .container > div {
+          flex: 1 1 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <img src="../../img/164951.jpg" />
+        <p>Current</p>
+      </div>
+      <div>
+        <img src="../../img/165042.jpg" />
+        <p>Luffy Hat</p>
+      </div>
+      <div>
+        <img src="../../img/262716.jpg" />
+        <p>Luffy</p>
+      </div>
+      <div>
+        <img src="../../img/401837.jpg" />
+        <p>Ace</p>
+      </div>
+    </div>
+    <div>Hello Worlds</div>
+  </body>
+</html>

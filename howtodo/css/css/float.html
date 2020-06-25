@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .navbar {
+        background-color: #4a4d30;
+        overflow: auto;
+      }
+      .navbar > div {
+        float: left;
+        padding: 10px;
+        color: white;
+      }
+
+      .navbar > div:hover {
+        background-color: black;
+        cursor: pointer;
+      }
+      .navbar div:first-child {
+        background-color: red;
+      }
+      .header,
+      .footer {
+        background-color: grey;
+        color: white;
+        padding: 10px;
+      }
+      .clear-fix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      .content > div {
+        float: left;
+        padding: 20px;
+        overflow: auto;
+      }
+      .right-content li {
+        background-color: turquoise;
+        margin: 5px;
+        padding: 5px;
+      }
+      .right-content ui {
+        list-style-type: none;
+      }
+      .right-content {
+        width: 30%;
+      }
+      .main-content {
+        width: 70%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div>Home</div>
+      <div>News</div>
+      <div>Contact</div>
+      <div>About</div>
+    </div>
+    <div class="header">
+      <h2>Chania</h2>
+    </div>
+    <div class="content clear-fix">
+      <div class="right-content">
+        <ui>
+          <li>The Flight</li>
+          <li>The City</li>
+          <li>The Island</li>
+          <li>The Food</li>
+        </ui>
+      </div>
+      <div class="main-content">
+        <h2>The Lorem</h2>
+        <p>
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It
+          has roots in a piece of classical Latin literature from 45 BC, making
+          it over 2000 years old. Richard McClintock, a Latin professor at
+          Hampden-Sydney College in Virginia, looked up one of the more obscure
+          Latin words, consectetur, from a Lorem Ipsum passage, and going
+          through the cites of the word in classical literature, discovered the
+          undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
+          1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+          Evil) by Cicero, written in 45 BC. This book is a treatise on the
+          theory of ethics, very popular during the Renaissance. The first line
+          of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
+          section 1.10.32.
+        </p>
+      </div>
+    </div>
+    <div class="footer">This is Footer</div>
+  </body>
+</html>

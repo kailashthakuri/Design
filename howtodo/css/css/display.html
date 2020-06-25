@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .image-box {
+        position: relative;
+        margin: 10px;
+        border: 1px solid #ddd;
+        padding: 20px;
+        width: 30%;
+        text-align: center;
+        float: left;
+      }
+      img {
+        width: 100%;
+        height: 300px;
+      }
+      .image-box:hover {
+        background-color: blanchedalmond;
+      }
+      .image-box p {
+        text-align: center;
+      }
+      .image-box button {
+        padding: 5px;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="image-box" id="image-box-1">
+      <img src="../../img/164951.jpg" />
+      <p>Current</p>
+      <button onclick="removeElement()">Remove</button>
+    </div>
+    <div class="image-box" id="image-box-2">
+      <img src="../../img/165042.jpg" />
+      <p>Haki</p>
+      <button onclick="hideElement()">Hide</button>
+    </div>
+    <div class="image-box" id="image-box-3">
+      <img src="../../img/262716.jpg" />
+      <p>Luffy</p>
+      <button onclick="reset()">Reset All</button>
+    </div>
+    <script type="text/javascript">
+      function hideElement() {
+        document.getElementById("image-box-2").style.visibility = "hidden";
+      }
+      function reset() {
+        document.getElementById("image-box-1").style.display = "block";
+        document.getElementById("image-box-2").style.visibility = "visible";
+      }
+      function removeElement() {
+        document.getElementById("image-box-1").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
